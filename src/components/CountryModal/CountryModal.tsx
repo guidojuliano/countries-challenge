@@ -13,7 +13,7 @@ export const CountryModal = ({ country, onClose, show }: CountryModalProps) => {
       tabIndex={-1}
       aria-hidden={!show}
       style={{ zIndex: 1000 }}
-      className={`fixed top-0 right-0 left-0 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full overflow-y-auto overflow-x-hidden ${
+      className={`fixed backdrop-blur-sm top-0 right-0 left-0 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full overflow-y-auto overflow-x-hidden ${
         show ? "flex" : "hidden"
       }`}
     >
