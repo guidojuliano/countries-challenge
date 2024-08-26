@@ -1,8 +1,6 @@
 "use client";
 import { FormEvent } from "react";
 import { useState, Dispatch } from "react";
-import worldSvg from "../../../public/svg/world.svg";
-import Image from "next/image";
 import useCountries from "app/hooks/useCountries";
 import { Country } from "app/types/country";
 
@@ -30,8 +28,20 @@ export const SearchBar = ({ setFilteredCountries }: SearchBarProps) => {
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src={worldSvg} className="h-8" alt="Challenge Logo" />
+        <a
+          href="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse text-black dark:text-white"
+        >
+          <svg
+            className="h-8"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="-4.5 0 32 32"
+            fill="currentColor"
+            aria-label="Challenge Logo"
+          >
+            <path d="M3.152 14.163c0 5.504 4.461 9.965 9.965 9.965 5.506 0 9.967-4.461 9.967-9.965s-4.461-9.966-9.967-9.966c-5.503 0-9.965 4.461-9.965 9.966zM13.117 5.246c4.917 0 8.918 4 8.918 8.917s-4 8.916-8.918 8.916c-4.916 0-8.916-4-8.916-8.916s3.999-8.917 8.916-8.917z" />
+            <path d="M19.059 25.862l0.505 1.020 0.941-0.465-1.426-2.88-0.94 0.466 0.455 0.917c-1.687 0.86-3.566 1.315-5.476 1.315-6.655 0-12.068-5.416-12.068-12.073 0-4.535 2.569-8.695 6.582-10.749l0.488 0.984 0.939-0.466-1.426-2.879-0.939 0.466 0.473 0.955c-4.368 2.231-7.166 6.755-7.166 11.689 0 7.060 5.603 12.832 12.593 13.109v1.596c-2.422 0.094-4.678 0.841-6.591 2.079h2.194c1.502-0.672 3.165-1.049 4.914-1.049 1.719 0 3.384 0.373 4.903 1.049h2.204c-1.937-1.248-4.201-1.981-6.575-2.079v-1.6c1.889-0.076 3.739-0.554 5.416-1.406z" />
+          </svg>
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Countries
           </span>

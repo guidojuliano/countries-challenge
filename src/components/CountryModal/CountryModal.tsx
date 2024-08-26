@@ -48,7 +48,7 @@ export const CountryModal = ({ country, onClose, show }: CountryModalProps) => {
             </button>
           </div>
           <div className="p-4 md:p-5 space-y-4">
-            <p className="text-base leading-relaxed text-gray-300 dark:text-gray-400">
+            <p className="text-base leading-relaxed text-gray-600 dark:text-gray-400">
               Capital: {country.capital} <br />
               Continent: {country.continent.name} <br />
               Currencies: {country.currencies.join(", ")} <br />
