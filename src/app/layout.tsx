@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Challenge TOTS NEXTjs",
   description:
     "Challenge que consiste en una aplicación web utilizando React con el framework Next.js",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
