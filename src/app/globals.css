@@ -13,10 +13,18 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --navbar-height: 10vh;
+    --footer-height: 10vh;
   }
 }
 
 body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -26,8 +34,21 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+#app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#map-container {
+  flex-grow: 1;
+  height: calc(100vh - var(--navbar-height) - var(--footer-height));
+}
+
+#navbar {
+  height: var(--navbar-height); /* Ajusta esta variable según tu diseño */
+}
+
+#footer {
+  height: var(--footer-height); /* Ajusta esta variable según tu diseño */
 }
